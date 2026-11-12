@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SO Aroma Diffuser S6",
+        "data": {
+          "address": "Bluetooth address",
+          "token": "Xiaomi BLE login token (24 hex characters)"
+        }
+      }
+    },
+    "error": {
+      "invalid_address": "Enter a Bluetooth address such as AA:BB:CC:DD:EE:FF.",
+      "invalid_token": "Enter the 24-character hexadecimal BLE login token."
+    },
+    "abort": {
+      "already_configured": "This diffuser is already configured."
+    }
+  },
+  "entity": {
+    "number": {
+      "spray_duration": {
+        "name": "Spray duration"
+      },
+      "spray_interval": {
+        "name": "Interval between sprays"
+      },
+      "light_timer_minutes": {
+        "name": "Light timer duration"
+      }
+    },
+    "sensor": {
+      "battery": {
+        "name": "Battery"
+      },
+      "charging_status": {
+        "name": "Charging status",
+        "state": {
+          "not_charging": "Not charging",
+          "charging": "Charging",
+          "charged": "Fully charged"
+        }
+      },
+      "light_timer_deadline": {
+        "name": "Light switch-off time"
+      }
+    },
+    "text": {
+      "light_color": {
+        "name": "Ambient light color (#RRGGBB)"
+      }
+    },
+    "light": {
+      "ambient_light": {
+        "name": "Ambient light"
+      }
+    },
+    "button": {
+      "light_timer_start": {
+        "name": "Start light timer"
+      },
+      "light_timer_cancel": {
+        "name": "Cancel light timer"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Аромадиффузор SO S6",
+        "data": {
+          "address": "Адрес Bluetooth",
+          "token": "Токен входа Xiaomi BLE (24 шестнадцатеричных символа)"
+        }
+      }
+    },
+    "error": {
+      "invalid_address": "Введи адрес Bluetooth в формате AA:BB:CC:DD:EE:FF.",
+      "invalid_token": "Введи 24 шестнадцатеричных символа токена входа BLE."
+    },
+    "abort": {
+      "already_configured": "Этот диффузор уже настроен."
+    }
+  },
+  "entity": {
+    "number": {
+      "spray_duration": {
+        "name": "Длительность распыления"
+      },
+      "spray_interval": {
+        "name": "Интервал между распылениями"
+      },
+      "light_timer_minutes": {
+        "name": "Таймер подсветки"
+      }
+    },
+    "sensor": {
+      "battery": {
+        "name": "Заряд аккумулятора"
+      },
+      "charging_status": {
+        "name": "Состояние зарядки",
+        "state": {
+          "not_charging": "Не заряжается",
+          "charging": "Заряжается",
+          "charged": "Заряжен"
+        }
+      },
+      "light_timer_deadline": {
+        "name": "Время выключения подсветки"
+      }
+    },
+    "text": {
+      "light_color": {
+        "name": "Цвет подсветки (#RRGGBB)"
+      }
+    },
+    "light": {
+      "ambient_light": {
+        "name": "Подсветка"
+      }
+    },
+    "button": {
+      "light_timer_start": {
+        "name": "Запустить таймер подсветки"
+      },
+      "light_timer_cancel": {
+        "name": "Отменить таймер подсветки"
+      }
+    }
+  }
+}

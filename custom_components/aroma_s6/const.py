@@ -1,0 +1,30 @@
+"""Identifiers and property definitions for the SO Aroma Diffuser S6."""
+
+DOMAIN = "aroma_s6"
+CONF_ADDRESS = "address"
+CONF_TOKEN = "token"
+
+POWER = (2, 1004)
+BATTERY = (3, 1)
+CHARGING = (3, 2)
+SPRAY_DURATION = (3, 3)
+IDLE_INTERVAL = (3, 4)
+SCHEDULE = (3, 5)
+REPEAT = (3, 7)
+LIGHT_LEVEL = (3, 8)
+LIGHT_COLOR = (3, 9)
+LIGHT_ON = 0x80
+LIGHT_GRADIENT = 0x40
+
+PROPERTY_TYPES = {
+    POWER: 0x1001,
+    BATTERY: 0x1001,
+    CHARGING: 0x1001,
+    SPRAY_DURATION: 0x1001,
+    IDLE_INTERVAL: 0x1001,
+    SCHEDULE: 0x3002,
+    REPEAT: 0x1001,
+    LIGHT_LEVEL: 0x1001,
+    LIGHT_COLOR: 0x5004,
+}
+PROPERTIES = tuple(PROPERTY_TYPES)
