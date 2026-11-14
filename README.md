@@ -51,9 +51,14 @@ In the diffuser's device page, click **Ambient light**, then the rainbow **Color
 
 ## Troubleshooting
 
-- If the diffuser is unreachable, wake it with its physical button and try again. Some units can stop advertising when off on battery. With the unit on USB power, try again near the adapter or proxy.
+- **The proxy sees the S6, but Home Assistant reports a timeout.** A Bluetooth advertisement only confirms that the proxy heard the diffuser. On the unit tested, active connections timed out on battery power even though advertisements were visible. Connecting the diffuser itself to USB power restored status updates and control. Try USB power and keep the diffuser within range of the adapter or proxy.
+- **A short button press has no effect.** Try USB power first. Holding the button until `88` flashes resets Bluetooth pairing. [S6 product instructions](https://home.miot-spec.com/p/bwj.diffuser.s6)
 - Close the diffuser page in Xiaomi Home if the phone holds the Bluetooth connection.
 - If a setting fails to save, wait for the connection to recover before retrying. Only values confirmed by the device are shown as saved.
 - The diffuser's LEDs have a limited color range, so the visible shade may differ from the color wheel.
+
+### Single-spray automations
+
+Spray duration sets the length of a spray. The power switch starts a mode that can repeat sprays at the configured interval. For a single spray, turn the diffuser off after the spray and check that Home Assistant reports **Off**. If Bluetooth drops, the stop command may fail and the diffuser may continue its cycle. Check the automation trace if a trigger produces no spray, especially if the automation has a cooldown.
 
 This is a community integration for the S6. Other SO or Xiaomi diffuser models have not been tested.
